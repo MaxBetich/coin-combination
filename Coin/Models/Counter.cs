@@ -13,5 +13,12 @@ namespace Coin.Models
       string output = $"{quarters} quarter(s) and {dimes} dime(s) and {nickels} nickel(s) and {pennies} pennies";
       return output;
     }
+
+    public string CoinReturn2(int inputValue)
+    {
+      int pennies = inputValue;
+      string output = $"0 quarter(s) and 0 dime(s) and 0 nickel(s) and {pennies} pennies";
+      return output;
+    }
   }
 }
