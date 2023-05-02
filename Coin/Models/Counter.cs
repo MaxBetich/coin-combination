@@ -4,11 +4,13 @@ namespace Coin.Models
   {
     public string CoinReturn(int inputValue)
     {
-      int dimes = (int)(inputValue/10);
-      int dimesRemainder = inputValue%10;
+      int quarters = (int)(inputValue/25);
+      int quartersRemainder = inputValue%25;
+      int dimes = (int)(quartersRemainder/10);
+      int dimesRemainder = quartersRemainder%10;
       int nickels = (int)(dimesRemainder/5);
       int pennies = dimesRemainder%5;
-      string output = $"{dimes} dime(s) and {nickels} nickel(s) and {pennies} pennies";
+      string output = $"{quarters} quarter(s) and {dimes} dime(s) and {nickels} nickel(s) and {pennies} pennies";
       return output;
     }
   }
