@@ -15,6 +15,9 @@ namespace Coin
         Counter newCounter = new Counter();
         string outputString = newCounter.CoinReturn(number);
         Console.WriteLine(outputString);
+        Console.WriteLine("A less practical way of expressing your coin count would be:");
+        string outputTwo = newCounter.CoinReturn2(number);
+        Console.WriteLine(outputTwo);
       }
       catch (Exception ex)
       {
