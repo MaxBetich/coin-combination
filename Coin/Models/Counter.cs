@@ -16,13 +16,19 @@ namespace Coin.Models
 
     public string CoinReturn2(int inputValue)
     {
-      int nickels = (int)(inputValue/5);
+      int dimes = (int)(inputValue/10);
+      if (dimes > 2)
+      {
+        dimes = 2;
+      }
+      int dimesRemainder = inputValue -(dimes*10);
+      int nickels = (int)(dimesRemainder/5);
       if (nickels > 2)
       {
         nickels = 2;
       }
-      int pennies = inputValue -(nickels*5);
-      string output = $"0 quarter(s) and 0 dime(s) and {nickels} nickel(s) and {pennies} pennies";
+      int pennies = dimesRemainder -(nickels*5);
+      string output = $"0 quarter(s) and {dimes} dime(s) and {nickels} nickel(s) and {pennies} pennies";
       return output;
     }
   }
