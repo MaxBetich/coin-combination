@@ -26,5 +26,12 @@ namespace Coin.Tests
       string coinReturn = newCounter.CoinReturn(9);
       Assert.AreEqual("1 nickel(s) and 4 pennies", coinReturn);
     }
+
+    [TestMethod]
+    public void CoinReturn_ReturnsDimes_String()
+    {
+      string coinReturn = newCounter.CoinReturn(19);
+      Assert.AreEqual("1 dime(s) and 1 nickel(s) and 4 pennies", coinReturn);
+    }
   }
 }
