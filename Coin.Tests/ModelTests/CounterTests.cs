@@ -17,14 +17,14 @@ namespace Coin.Tests
     public void CoinReturn_ReturnsStringOfValues_String()
     {
       string coinReturn = newCounter.CoinReturn(4);
-      Assert.AreEqual("4 pennies", coinReturn);
+      Assert.AreEqual("0 nickel(s) and 4 pennies", coinReturn);
     }
 
     [TestMethod]
     public void CoinReturn_ReturnsNicklesAndPennies_String()
     {
       string coinReturn = newCounter.CoinReturn(9);
-      Assert.AreEqual("1 nickle(s) and 4 pennies", coinReturn);
+      Assert.AreEqual("1 nickel(s) and 4 pennies", coinReturn);
     }
   }
 }
