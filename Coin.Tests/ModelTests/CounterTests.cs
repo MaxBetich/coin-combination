@@ -61,5 +61,12 @@ namespace Coin.Tests
       string coinReturn2 = newCounter.CoinReturn2(45);
       Assert.AreEqual("0 quarter(s) and 2 dime(s) and 2 nickel(s) and 15 pennies", coinReturn2);
     }
+
+    [TestMethod]
+    public void CoinReturn2_ReturnsTwoQuarters_String()
+    {
+      string coinReturn2 = newCounter.CoinReturn2(120);
+      Assert.AreEqual("2 quarter(s) and 2 dime(s) and 2 nickel(s) and 40 pennies", coinReturn2);
+    }
   }
 }
